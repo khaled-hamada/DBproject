@@ -1,0 +1,26 @@
+Consumer API keys
+
+
+rdcH8t1pDEWwxvaYT8ir3gyhS (API key)
+
+DrKvpsxJrCFT7suxGyMc9FVOCwiQIcsI7WELw2O4GEKao1IIR2 (API secret key)
+
+------------------------------------------------------------------------------
+
+Access token & access token secret
+
+2737398621-GldBu1iJfHod57VthkSHMa6SJfxn1tPPLoLYu6h (Access token)
+
+YwHGAf4x13xTPAEvyXvrPD7mfP6GoIUnZyRTtQFxhRcWF (Access token secret)
+
+#NOTE 
+in stream.filter(track=['i', 'the', 'a', 'he', 'she',
+                         'him', 'we', 'they', 'this', 'that', 'non' , 'no', 'yes'], follow ='ID')
+
+# or this is better 
+stream.filter( follow =['ID'])
+
+by default follow = None ;
+if i want to get specific twitter account data put follow equal user id 
+http://mytwitterid.com/
+
