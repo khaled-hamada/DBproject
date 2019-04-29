@@ -23,17 +23,17 @@ import time
 class StdOutListener(StreamListener):
 
     def __init__(self):
-        self.tweets_data_row =[]
+        self.tweets_raw_data =[]
 ################################################
     def on_data(self, data):
-        self.tweets_data_row.append(data)
+        self.tweets_raw_data.append(data)
         return True
 #####################################################
     def on_error(self, status):
         print (status)
 
 
-def main(tweets_data_row):
+def main(tweets_raw_data):
 
 
     #Reading Tweets
@@ -41,7 +41,7 @@ def main(tweets_data_row):
     
     tweets_data = []
 
-    for tweet in tweets_data_row :
+    for tweet in tweets_raw_data :
         if tweet.strip():  # if it is not a blank tweet
             try:
                 t = json.loads(tweet)
@@ -104,7 +104,7 @@ if __name__=='__main__':
     run_time = 7 ;# run stream for 7 seconds 
     time.sleep(run_time)
     stream.disconnect()
-    tweets = main(l.tweets_data_row)
+    tweets = main(l.tweets_raw_data)
 
 
 
